@@ -1,2 +1,2 @@
-# typescript
-My collection of TypeScript code snippets 
+# TypeScript
+A collection of TypeScript code snippets for quick reference.
