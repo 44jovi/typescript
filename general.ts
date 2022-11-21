@@ -30,7 +30,8 @@ someNumber = "Strings are not allowed!";
 // Custom interfaces
 // -----------------
 
-// 'interface' - defines custom objects structure
+// 'interface' defines structure of custom objects
+// Declares the data type of each of the object's properties
 interface Insect {
   name: string;
   legs: number;
