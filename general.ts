@@ -15,3 +15,13 @@ someVar2 = "some text string";
 someVar2 = 44;
 someVar2 = true;
 someVar2 = {};
+
+// ---------------
+// Implicit typing
+// ---------------
+
+// Assigning a number here sets this variable's type to number
+let someNumber = 23;
+
+someNumber = 44;
+someNumber = "Strings are not allowed!";
