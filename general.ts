@@ -48,7 +48,7 @@ const bee: Insect = {
 };
 
 // ------------
-// Custom Types
+// Custom types
 // ------------
 
 // Example 1
@@ -81,3 +81,22 @@ font = "something not allowed";
 font = "bold";
 font = "italic";
 font = "underline";
+
+// ---------------
+// Function typing
+// ---------------
+
+// Example 1
+// Function arguments must be numbers
+// Return value must be a string
+function power(x: number, y: number): string {
+  return Math.pow(x, y).toString();
+}
+
+// Example 2
+// Use 'void' if expecting no return value (e.g. a side effect)
+let arr = [];
+
+function addNumToArr(x: number): void {
+  arr.push(x);
+}
