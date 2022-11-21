@@ -25,3 +25,23 @@ let someNumber = 23;
 
 someNumber = 44;
 someNumber = "Strings are not allowed!";
+
+// -----------------
+// Custom interfaces
+// -----------------
+
+// 'interface' - defines custom objects structure
+interface Insect {
+  name: string;
+  legs: number;
+  commonColours: string[]; // array of strings
+  [key: string]: any;
+}
+
+const bee: Insect = {
+  name: "Bee",
+  legs: 6,
+  commonColours: ["black", "yellow"],
+  optionalProp1: "Some optional string property",
+  optionalProp2: 44,
+};
