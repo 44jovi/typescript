@@ -46,3 +46,38 @@ const bee: Insect = {
   optionalProp1: "Some optional string property",
   optionalProp2: 44,
 };
+
+// ------------
+// Custom Types
+// ------------
+
+// Example 1
+
+// Declare alias types
+type Cm = number;
+type Kg = number;
+
+// Declare new type using predefined type aliases
+type Person = {
+  name: string;
+  height: Cm;
+  weight: Kg;
+};
+
+// Declare and initialise the custom type's properties
+const Joe: Person = {
+  name: "Joe",
+  height: 175,
+  weight: 80,
+};
+
+// Example 2
+
+type FontStyle = "bold" | "italic" | "underline";
+
+let font: FontStyle;
+
+font = "something not allowed";
+font = "bold";
+font = "italic";
+font = "underline";
