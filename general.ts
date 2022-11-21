@@ -1,3 +1,9 @@
+/*
+This .ts file is not intended for being compiled into a .js file.
+Only to be used as reference - using a linter to show code allowed/disallowed by TypeScript.
+To test specific snippets, copy code to a different .ts file before compiling.
+*/
+
 // -----
 // 'any'
 // -----
@@ -47,6 +53,15 @@ const bee: Insect = {
   optionalProp2: 44,
 };
 
+const arrayOfInsects: Insect[] = [];
+
+arrayOfInsects.push(1);
+arrayOfInsects.push({
+  name: "Grasshopper",
+  legs: 6,
+  commonColours: ["green", "brown"],
+});
+
 // ------------
 // Custom types
 // ------------
@@ -82,9 +97,9 @@ font = "bold";
 font = "italic";
 font = "underline";
 
-// ---------------
-// Function typing
-// ---------------
+// ---------
+// Functions
+// ---------
 
 // Example 1
 // Function arguments must be numbers
@@ -95,8 +110,41 @@ function power(x: number, y: number): string {
 
 // Example 2
 // Use 'void' if expecting no return value (e.g. a side effect)
-let arr = [];
+let array1 = [];
 
 function addNumToArr(x: number): void {
-  arr.push(x);
+  array1.push(x);
 }
+
+// -------------------
+// Arrays (and Tuples)
+// -------------------
+
+// Example 1 (Array)
+const array2: number[] = [];
+
+array2.push(1);
+array2.push("some string");
+array2.push(true);
+
+// Also see example above with 'arrayOfInsects'
+
+// Example 2 (Tuple)
+type SomeTuple1 = [number, string, boolean];
+
+const array3: SomeTuple1[] = [[1, "Hi!", true]];
+
+array3.push(1);
+array3.push([2, "Bye!", false]);
+
+// Example 3 (Tuple)
+// '?' makes the argument optional *but* maintains the type if it is passed in
+type SomeTuple2 = [number?, string?, boolean?];
+
+const array4: SomeTuple2[] = [];
+
+array4.push([1, "Greetings", "I need to be a boolean value."]);
+array4.push([1, "Greetings", true]);
+array4.push([1, "Greetings"]);
+array4.push([1]);
+array4.push([]);
