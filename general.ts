@@ -148,3 +148,17 @@ array4.push([1, "Greetings", true]);
 array4.push([1, "Greetings"]);
 array4.push([1]);
 array4.push([]);
+
+// --------
+// Generics
+// --------
+
+// **To be reviewed**
+
+class Observable<T> {
+  constructor(public value: T) {}
+}
+
+let x: Observable<number>;
+let y: Observable<Insect>;
+let z = new Observable(44);
