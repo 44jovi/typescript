@@ -38,3 +38,11 @@ const getName = (params: { first: string; last?: string }) => {
   }
   return params.first;
 };
+
+// 04-optional-properties.solution
+const getName = (first: string, last?: string) => {
+  if (last) {
+    return `${first} ${last}`;
+  }
+  return first;
+};
