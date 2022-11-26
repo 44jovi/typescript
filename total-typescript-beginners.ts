@@ -46,3 +46,19 @@ const getName = (first: string, last?: string) => {
   }
   return first;
 };
+
+// 05-assigning-types-to-variables.solution
+
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  isAdmin: boolean;
+}
+
+const defaultUser: User = {
+  id: 1,
+  firstName: "Adonis",
+  lastName: "Creed",
+  isAdmin: true,
+};
